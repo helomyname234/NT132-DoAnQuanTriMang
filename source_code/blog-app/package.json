@@ -1,0 +1,40 @@
+{
+  "name": "guilherme-blog",
+  "preferGlobal": "true",
+  "version": "0.2.0",
+  "author": "Guilherme Defreitas Juraszek <guilherme.defreitas@gmail.com>",
+  "description": "Simple blog system",
+
+  "main": "./app",
+
+  "dependencies" : {
+    "jade"   :  ">=0.26.3",
+    "express" :  ">=2.5.x",
+    "connect-assets" : ">=2.2.1",
+    "less" : ">=1.4.0",
+    "coffee-script" : ">=1.3.3",
+    "formidable" : "*",
+    "zlib" : "*",
+    "mongodb" : ">=1.0.2",
+    "mongojs" : ">= 0.4.3",
+    "mongoose" : "*",
+    "marked" : "*",
+    "moment" : "*",
+    "rss" : "*",
+    "gzippo" : "*",
+    "crypto" : "*",
+    "underscore" : "*",
+    "i18n" : "*",
+    "async" : "*",
+    "mocha" : "*"
+  },
+
+  "bundleDependencies": [
+  ],
+  
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.20",
+    "npm" : ">=1.3.4"
+  }
+}
