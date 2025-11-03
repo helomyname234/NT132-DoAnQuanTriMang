@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            font-family: ' sans-serif', Tahoma, Geneva, Verdana;
+        }
+    </style>
+    <%- include("./partials/head") %>
+        <title>Profile-Page</title>
+</head>
+<%- include("./partials/nav") %>
+    <h1 style="text-align: center; margin: 10px 0 70px 0;">Profile Page</h1>
+    <div style="display: flex; flex-wrap: wrap; flex-direction: column; align-items: center;">
+        <img src="<%= user.profileImgUrl %>" style="width: 150px; border-radius: 50%;">
+        <h2 style="margin: 0 0 10px 5px;">
+            <%= user.fullName %>
+        </h2>
+
+        <h5>
+            <%= user.email %>
+        </h5>
+    </div>
+
+
+    <h2 style="margin: 100px 0 80px 0; text-align: center;">Your Blogs</h2>
+
+    <% blogs.forEach(blog=> { %>
+        <div class="col-3">
+            <div class="card" style="width: 15rem; margin: 10px 5px 10px 5px; height: 342px; width: 240px;">
+                <img class="card-img-top" src="<%= blog.coverImageUrl %>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= blog.tittle %>
+                    </h5>
+                    <a href="/blog/<%= blog._id %>" class="btn btn-primary"> View</a>
+                    <a href="/blog/delete/<%= blog._id %>" class="btn btn-primary"> Delete</a>
+
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+
+            <%- include("./partials/script") %>
+                </body>
+
+</html>
