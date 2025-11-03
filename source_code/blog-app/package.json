@@ -1,40 +1,28 @@
 {
-  "name": "guilherme-blog",
-  "preferGlobal": "true",
-  "version": "0.2.0",
-  "author": "Guilherme Defreitas Juraszek <guilherme.defreitas@gmail.com>",
-  "description": "Simple blog system",
-
-  "main": "./app",
-
-  "dependencies" : {
-    "jade"   :  ">=0.26.3",
-    "express" :  ">=2.5.x",
-    "connect-assets" : ">=2.2.1",
-    "less" : ">=1.4.0",
-    "coffee-script" : ">=1.3.3",
-    "formidable" : "*",
-    "zlib" : "*",
-    "mongodb" : ">=1.0.2",
-    "mongojs" : ">= 0.4.3",
-    "mongoose" : "*",
-    "marked" : "*",
-    "moment" : "*",
-    "rss" : "*",
-    "gzippo" : "*",
-    "crypto" : "*",
-    "underscore" : "*",
-    "i18n" : "*",
-    "async" : "*",
-    "mocha" : "*"
+  "name": "blogging-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-
-  "bundleDependencies": [
-  ],
-  
-  "license": "MIT",
-  "engines": {
-    "node": ">=0.10.20",
-    "npm" : ">=1.3.4"
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "cloudinary": "^1.41.3",
+    "cookie-parser": "^1.4.7",
+    "cookieparser": "^0.1.0",
+    "dotenv": "^17.0.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "multer": "^2.0.1",
+    "multer-storage-cloudinary": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

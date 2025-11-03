@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            font-family: ' sans-serif', Tahoma, Geneva, Verdana;
+        }
+    </style>
+    <%- include("./partials/head") %>
+        <title>Home-Page</title>
+</head>
+
+<body style="background-color: #f8f9fa; ">
+
+    <%- include("./partials/nav") %>
+        <div class="container">
+            <div class="row ">
+                <% Blog.forEach(blog=> { %>
+                    <div class="col-3">
+                        <div class="card" style="width: 15rem; margin: 10px 5px 10px 5px; height: 342px; width: 240px;">
+                            <img class="card-img-top" src="<%= blog.coverImageUrl %>" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= blog.tittle %>
+                                </h5>
+                                <a href="/blog/<%= blog._id %>" class="btn btn-primary"> View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </div>
+        </div>
+
+        <%- include("./partials/script") %>
+</body>
+
+</html>

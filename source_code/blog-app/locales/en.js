@@ -1,3 +1,0 @@
-{
-	"Old Posts": "Old Posts"
-}

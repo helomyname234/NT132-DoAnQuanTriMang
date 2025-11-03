@@ -1,0 +1,11 @@
+// Khai báo vùng quản lý cho blog.com
+zone "blog.com" {
+    type master;
+    file "/etc/bind/zones/db.blog.com";
+};
+
+// Khai báo vùng quản lý cho e-com.com
+zone "e-com.com" {
+    type master;
+    file "/etc/bind/zones/db.e-com.com";
+};

@@ -1,0 +1,7 @@
+allow-query { any; };
+        recursion yes;
+        forwarders {
+                8.8.8.8; // DNS của Google
+                8.8.4.4; // DNS phụ của Google
+        };
+        forward first;

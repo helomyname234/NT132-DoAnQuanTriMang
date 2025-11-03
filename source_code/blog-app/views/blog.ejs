@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            font-family: ' sans-serif', Tahoma, Geneva, Verdana;
+        }
+    </style>
+    <%- include("./partials/head") %>
+        <title>Home-Page</title>
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <%- include("./partials/nav") %>
+
+        <div class="container" style="margin: 10px 0 0 15px; ">
+
+            <h1>
+                <%= blog.tittle %>
+            </h1>
+
+            <img src="<%= blog.coverImageUrl %>" style="width : 500px ;">
+
+            <pre
+                style="margin: 15px 0 0 10px;  white-space: pre-wrap; font-size: 20px; font-family: 'Franklin Gothic Medium';"><%= blog.body %>
+            </pre>
+            <p style="font-weight: 600; margin: 10px 0 0 0;">Published By :</p>
+            <div class="User" style="display: flex;">
+
+                <img src="<%= blog.createdBy.profileImgUrl %>" style="width: 70px; border-radius: 50%;">
+                <h3 style="align-self: flex-end;">
+                    <%= blog.createdBy.fullName %>
+                </h3>
+            </div>
+
+        </div>
+
+
+        <div class="container" style="margin: 30px 0 0 20px;">
+
+            <h3>Comments (<%= comments.length %>)
+            </h3>
+
+            <% if (locals.user) { %>
+                <form action="/blog/comment/<%= blog._id %>" method="post" style="margin:0px 0 0 0px; width: 50%; ">
+
+                    <div class="form-group" style="display: flex;">
+                        <input type="text" class="form-control" name="content" aria-describedby="emailHelp"
+                            placeholder="Write Comment" style="margin: 0 0 20px 0;">
+                        <button type="submit" class="btn btn-primary" style="margin: 0 0 20px 20px;">Sent</button>
+                </form>
+                <% } %>
+
+        </div>
+
+        <div class="container">
+            <% comments.forEach(comment=> { %>
+                <div style="margin: 20px 0 25px 0;">
+                    <div style="display: flex;">
+                        <img src="<%= comment.createdBy.profileImgUrl %>" style="width : 40px; border-radius: 50%;">
+                        <h3 style="align-self: flex-end; font-size: 15px; margin: 0 0 0 0;">
+                            <%= comment.createdBy.fullName %>
+                        </h3>
+                    </div>
+                    <div style="margin: 15px 0 0 20px; font-size: 20px;">
+                        <pre> <%= comment.content %></pre>
+                    </div>
+                </div>
+                <% }) %>
+
+
+
+        </div>
+
+
+        <%- include("./partials/script") %>
+
+</body>
+
+</html>
