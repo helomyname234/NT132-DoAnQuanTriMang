@@ -1,9 +1,3 @@
-Chắc chắn rồi! Bạn đã đi qua một hành trình gỡ lỗi rất thực tế và rút ra được nhiều kinh nghiệm quý giá. Việc tắt DNS IPv6 là một "mẹo" rất hữu ích khi làm việc trong môi trường lab cục bộ.
-
-Dưới đây là một bản kế hoạch triển khai hoàn chỉnh cuối cùng, tổng hợp tất cả kinh nghiệm và cấu hình chuẩn xác mà chúng ta đã thống nhất.
-
----
-
 ### **KẾ HOẠCH TRIỂN KHAI HOÀN CHỈNH (PHIÊN BẢN CUỐI CÙNG)**
 
 **Tình trạng ban đầu:**
